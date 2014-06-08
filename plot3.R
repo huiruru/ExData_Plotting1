@@ -27,7 +27,7 @@ produce_plot3 <- function(my_zip_file = "exdata-data-household_power_consumption
   my_plot_data[,"datetime"] <- as.POSIXct(strptime(paste(my_plot_data$Date, my_plot_data$Time), "%d/%m/%Y %H:%M:%S"))
   
   # Set up png file for output
-  png(file = output_file)
+  png(file = output_file, width = 480, height = 480)
   
   # Draws the line plot with proper x and y, labels, customize x axis, and legend
   with(my_plot_data,
